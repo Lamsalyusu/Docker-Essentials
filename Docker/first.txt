@@ -1,0 +1,5 @@
+1. Environment reproducibility --> Everyone gets the exact same setup 
+2. Dependency management --> No python hell. conda weirdness , OS specofic issues 
+3. portability --> run your container on any machine with docker (dev laptop , server, cloud instances).
+4. Version control for environments:Dockerfiles are text = versionalble in GIT
+
