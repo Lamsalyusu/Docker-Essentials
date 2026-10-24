@@ -8,3 +8,23 @@ Starting with a Dockerfile , we can build a container image that can be used to 
 
 Docker File -----> (docker build) ----> Docker Image -----> (docker run) ----> container
 
+Docker is a software platform that simplifies the process of building , running and dstributing applications using containers.
+
+Docker Architecture - Docker Client 
+It enables developers/users to interact with Dockers 
+When you use docker commands , the docker client sends these commands to the Docker daemon(dockerd)
+client cli >>>>>
+> docker pull 
+> docker run 
+> docker build
+
+Host Architecture 
+The server or Virtual machine on which Docker Engine is installed
+The docker Daemion (dockerd) id the heart of docker
+
+Docker Images
+Images are read only binary templates used to build containers 
+
+Docker Daemon Architecture
+The Docker Daemon (dockerd)  id the heart of Docker 
+--> It listens to the Docker API requests (from the Docker client) and manages containers , images ,networks and volumes
