@@ -28,3 +28,26 @@ Images are read only binary templates used to build containers
 Docker Daemon Architecture
 The Docker Daemon (dockerd)  id the heart of Docker 
 --> It listens to the Docker API requests (from the Docker client) and manages containers , images ,networks and volumes
+--> it build container images as requested by the client
+--> it interfaces with docker registries to pull or publish images as requested by the client 
+
+Docker Registries
+A docker registry stoes Docker images
+Docker Hub is the public registry that anyone can use 
+when needed the required images can be pulled from the configured registry 
+users can push their created images to the configured registry
+
+Understanding how Docker Works
+Docker CLI 
+--> Docker CLI communicates with the Docker Daemon/server, dockerd
+
+Dockerd
+--> dockerd processes the Docker API requests and utilizes containerd functionality to manage the container's life cycle
+
+Containerd
+Manages containers, storages and Networking 
+Pushes and pulls images 
+
+runC
+creates and runs containers.
+
