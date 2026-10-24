@@ -1,0 +1,8 @@
+A container od a lightweight, isolated process runnig on a shared operating system kernel packaged with everythong it needs to run ,include code ,librabries, environment variables, runtime and configiration files.
+
+container - featues:
+Doesnot requirem seperate OS
+Isolated , self contained environments
+Faster to create and Tear downw 
+Repeatable
+
