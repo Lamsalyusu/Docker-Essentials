@@ -3,3 +3,11 @@
 3. portability --> run your container on any machine with docker (dev laptop , server, cloud instances).
 4. Version control for environments:Dockerfiles are text = versionalble in GIT
 
+Virtual Machines (VMs - Issues)
+Heavyweight (slow to start)
+Limited Scalibility
+Poor Dev/ Text / Prod parity 
+Redundant OS overhead
+Inefficient Image management
+Low portability 
+
