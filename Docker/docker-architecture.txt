@@ -1,0 +1,10 @@
+to build, ship and run containers, we need a container runtime engine be installed on the hosts operating system.
+1. The engine shares the HOST'S OS kernel among the containers
+2.Contanerized Application are "isolated"
+Docker is the most popular container engine 
+
+
+Starting with a Dockerfile , we can build a container image that can be used to consistently run a application across different environments.
+
+Docker File -----> (docker build) ----> Docker Image -----> (docker run) ----> container
+
