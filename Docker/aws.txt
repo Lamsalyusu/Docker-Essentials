@@ -1,0 +1,23 @@
+You don't need an AWS account to learn containerization, deploy your project locally, or even practice Kubernetes. There are a few different tools, but they serve different purposes.
+1. The main alternatives to AWS
+
+Docker Desktop
+Best for learning Docker
+Build images, run containers, manage networks and volumes, and use Docker Compose. It also offers a way to run Kubernetes locally.
+Runs locally; no cloud account required.
+
+VirtualBox
+Runs an entire virtual machine, such as Ubuntu Server, inside your computer. You can install Docker inside that VM and simulate a separate server.
+Best for learning Linux servers and virtual machines alongside containers.
+
+Podman / Podman Desktop
+An alternative container engine with a daemonless architecture and rootless container support. Useful for learning container workflows without relying on Docker Engine's traditional daemon model.
+Works well on Linux, including Arch-based distributions.
+
+Minikube
+Creates a local Kubernetes cluster so you can deploy containerized services and practice Pods, Deployments, Services, and scaling.
+Best when you're ready to move from Docker into Kubernetes.
+
+kind
+Runs Kubernetes clusters using containers as nodes. Particularly useful for testing Kubernetes manifests and learning multi-node cluster concepts locally.
+Great for developers who already understand Docker.
