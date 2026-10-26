@@ -1,0 +1,23 @@
+Installed Docker Engine and verified the Docker CLI.
+
+Verified Docker Compose installation and version.
+
+Installed Docker Desktop on CachyOS using a .pkg.tar.zst package.
+
+Learned about package conflicts between Docker Desktop and Docker Compose.
+
+Checked Docker Desktop's systemd user service.
+
+Explored Docker contexts and the difference between the default Docker Engine and Docker Desktop environments.
+
+Commands Practiced
+
+docker --version
+docker compose version
+pacman -Q docker docker-desktop docker-compose
+systemctl --user status docker-desktop
+docker context ls
+
+Key Takeaway
+
+Docker CLI allows container management through the terminal, while Docker Desktop provides a graphical interface for managing containers, images, and other Docker resources.
