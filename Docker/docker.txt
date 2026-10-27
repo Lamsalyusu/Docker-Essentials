@@ -37,7 +37,12 @@ Docker commands i used today
 7.docker ps -a
 8.docker ps
 9.docker rmi IMAGE_NAME
-10.docker rm CONT_NAME
+10.docker rm CONT_NAME 
+11.docker pull IMAGE_NAME:version
+12.docker run -d IMAGE_NAME
+13.docker run --name CONT_NAME -d IMAGE_NAME 
+
+===================================================================================================================================================================================================
 
 
 # Docker Basic Commands
