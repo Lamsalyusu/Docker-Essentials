@@ -40,3 +40,150 @@ Docker commands i used today
 10.docker rm CONT_NAME
 
 
+# Docker Basic Commands
+
+## 1. `docker pull IMAGE_NAME`
+**Purpose:** Downloads a Docker image from a container registry, usually Docker Hub, to your local machine.
+
+**Example:**
+```bash
+docker pull nginx
+```
+This downloads the Nginx image without starting a container.
+
+## 2. `docker images` (or `docker image ls`)
+**Purpose:** Lists the Docker images available locally on your machine.
+
+**Example:**
+```bash
+docker images
+```
+It displays the image name, tag, image ID, creation time, and size.
+
+## 3. `docker run IMAGE_NAME`
+**Purpose:** Creates and starts a new container from an image.
+
+**Example:**
+```bash
+docker run nginx
+```
+Docker creates a container and starts the Nginx process. Without additional options, it runs in the foreground and may occupy your terminal.
+
+**Remember:** Each time you run this command, Docker normally creates a new container.
+
+## 4. `docker run -it IMAGE_NAME`
+**Purpose:** Starts a new container with an interactive terminal.
+
+- `-i`: Keeps standard input open so you can interact with the container.
+- `-t`: Allocates a terminal (TTY).
+
+**Example:**
+```bash
+docker run -it ubuntu bash
+```
+This opens a Bash shell inside an Ubuntu container, allowing you to execute commands interactively.
+
+## 5. `docker stop CONTAINER_NAME_OR_ID`
+**Purpose:** Stops a running container gracefully by sending it a termination signal, then forcefully stops it if it does not exit within the timeout.
+
+**Example:**
+```bash
+docker stop my-container
+```
+The container stops, but it is not deleted. You can start it again later.
+
+## 6. `docker start CONTAINER_NAME_OR_ID`
+**Purpose:** Starts a previously created container that is stopped.
+
+**Example:**
+```bash
+docker start my-container
+```
+It restarts the existing container using its original configuration. It does not create a new container.
+
+## 7. `docker ps -a`
+**Purpose:** Lists all containers, including running, stopped, and exited containers.
+
+**Example:**
+```bash
+docker ps -a
+```
+Use this command to find containers that are no longer running.
+
+## 8. `docker ps`
+**Purpose:** Lists only currently running containers.
+
+**Example:**
+```bash
+docker ps
+```
+It displays container IDs, image names, status, ports, and container names.
+
+## 9. `docker rmi IMAGE_NAME`
+**Purpose:** Removes a local Docker image.
+
+**Example:**
+```bash
+docker rmi nginx
+```
+Docker removes the specified image if it is not being used by a container. If a container still references the image, you may need to remove that container first.
+
+**Note:** Removing an image does not automatically delete containers created from it.
+
+## 10. `docker rm CONTAINER_NAME_OR_ID`
+**Purpose:** Removes a stopped container.
+
+**Example:**
+```bash
+docker rm my-container
+```
+This deletes the container itself, not the Docker image it was created from.
+
+**Note:** A running container generally needs to be stopped before it can be removed.
+
+---
+
+## Quick Summary
+
+| Command | Function |
+|---|---|
+| `docker pull IMAGE_NAME` | Downloads an image |
+| `docker images` | Lists local images |
+| `docker run IMAGE_NAME` | Creates and starts a container |
+| `docker run -it IMAGE_NAME` | Starts an interactive container |
+| `docker stop CONTAINER` | Stops a running container |
+| `docker start CONTAINER` | Starts an existing stopped container |
+| `docker ps -a` | Lists all containers |
+| `docker ps` | Lists running containers |
+| `docker rmi IMAGE_NAME` | Removes an image |
+| `docker rm CONTAINER` | Removes a container |
+
+## Important Difference
+
+- **Image:** A template used to create containers.
+- **Container:** A running or stopped instance created from an image.
+
+A simple workflow:
+
+```bash
+docker pull ubuntu
+docker images
+docker run -it --name my-ubuntu ubuntu bash
+```
+
+After exiting the container, you can inspect and manage it:
+
+```bash
+docker ps -a
+docker start my-ubuntu
+docker stop my-ubuntu
+docker rm my-ubuntu
+```
+
+You can remove the image afterward with:
+
+```bash
+docker rmi ubuntu
+```
+
+Make sure no remaining containers reference the image before removing it.
