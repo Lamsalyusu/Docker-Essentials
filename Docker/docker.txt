@@ -192,3 +192,61 @@ docker rmi ubuntu
 ```
 
 Make sure no remaining containers reference the image before removing it.
+
+## 11. `docker pull IMAGE_NAME:VERSION`
+
+**Purpose:** Downloads a specific version (tag) of a Docker image from a container registry.
+
+**Example:**
+```bash
+docker pull nginx:1.28
+```
+
+This downloads the Nginx image tagged `1.28`, rather than relying on the default `latest` tag.
+
+**Remember:**
+- `IMAGE_NAME` specifies the image.
+- `VERSION` is the image tag, often used to identify a version.
+- If you omit the tag, Docker defaults to `latest`.
+
+## 12. `docker run -d IMAGE_NAME`
+
+**Purpose:** Creates and starts a new container in detached mode, meaning it runs in the background.
+
+**Example:**
+```bash
+docker run -d nginx
+```
+
+Docker starts an Nginx container and returns its container ID, allowing you to continue using your terminal.
+
+**Remember:**
+- `-d` means detached mode.
+- The container continues running in the background as long as its main process stays alive.
+- To see it, use `docker ps`.
+
+## 13. `docker run --name CONTAINER_NAME -d IMAGE_NAME`
+
+**Purpose:** Creates and starts a container in detached mode with a custom name.
+
+**Example:**
+```bash
+docker run --name my-nginx -d nginx
+```
+
+This creates a container named `my-nginx` and runs it in the background.
+
+You can then manage it using its name instead of copying its container ID.
+
+**Examples:**
+```bash
+docker ps
+docker stop my-nginx
+docker start my-nginx
+docker rm my-nginx
+```
+
+**Remember:**
+- `--name my-nginx` assigns a custom name to the container.
+- `-d` runs the container in the background.
+- Container names must be unique among existing containers.
