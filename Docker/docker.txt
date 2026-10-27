@@ -21,3 +21,22 @@ docker context ls
 Key Takeaway
 
 Docker CLI allows container management through the terminal, while Docker Desktop provides a graphical interface for managing containers, images, and other Docker resources.
+
+===================================================================================================================================================================================================
+===================================================================================================================================================================================================
+===================================================================================================================================================================================================
+
+Docker commands i used today 
+
+1.docker pull IMAGE_NAME
+2.docker image s
+3.docker run IMAGE_NAME
+4.docker run -it IMAGE_NAME
+5.docker stop CONT_NAME or CONT_ID
+6.docker start CONT_NAME or CONT_ID
+7.docker ps -a
+8.docker ps
+9.docker rmi IMAGE_NAME
+10.docker rm CONT_NAME
+
+
