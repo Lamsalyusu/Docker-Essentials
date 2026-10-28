@@ -5,3 +5,37 @@ Layer 2     |
 Layer 1     | These layers are immutable in nature (read only)
    |        |
 Base Layer  |
+
+
+1. Base Layer — Ghar ko foundation.
+Yo base image ho, jastai Ubuntu or Node.js.
+
+2. Layer 1 — Foundation mathi थपिएको पहिलो कुरा।
+Jastai Git install garnu.
+
+3. Layer 2 — Tespachi थपिएको अर्को कुरा।
+Jastai afno application ko code copy garnu.
+
+4. Container Layer — Ghar use garda timile garne changes।
+Jastai room bhitra furniture rakhnu. Yo container ko writable layer ho.
+Container Layer
+
+Runtime changes — writable
+
+Layer 2
+
+Application code — read-only
+
+Layer 1
+
+Installed software — read-only
+
+Base Layer
+
+Starting filesystem — read-only
+
+
+Yaad rakhne main kura:
+- Image layers = application banauna tayari gareko read-only parts.
+- Container layer = application run huda changes store garne writable part.
+- Container delete garda writable layer ko changes pani delete hunchhan; image chai normally rahirahanchha.
