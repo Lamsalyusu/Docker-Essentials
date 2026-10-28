@@ -1,1 +1,5 @@
-docker 
+docker logs CONT_ID
+docker exec -it CONT_ID /bin/bash
+docker exec -it CONT_ID /bin/sh
+
+bash and sh --> some container might not have bash so they may prefer sh(shell)
