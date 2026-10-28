@@ -1,3 +1,10 @@
 binding the port of the host to the containers
 docker run -p8080:3306 IMAGE_NAME
 host machine port mapping to container port  --> this process is called port bindin g
+
+### Docker Port Binding
+- Port binding connects a port on the host machine to a port inside a Docker container.
+- The `-p` flag is used to publish ports.
+- Syntax: `-p HOST_PORT:CONTAINER_PORT`
+- Example: `docker run -d -p 8080:80 nginx`
+- Here, host port `8080` forwards traffic to container port `80`, allowing access through `http://localhost:8080`.
