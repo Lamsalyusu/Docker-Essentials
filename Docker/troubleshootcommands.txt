@@ -3,3 +3,10 @@ docker exec -it CONT_ID /bin/bash
 docker exec -it CONT_ID /bin/sh
 
 bash and sh --> some container might not have bash so they may prefer sh(shell)
+
+### Docker Troubleshooting Commands
+- `docker logs CONTAINER_ID` — Displays container application logs to help identify errors.
+- `docker logs -f CONTAINER_ID` — Follows logs in real time.
+- `docker exec -it CONTAINER_ID /bin/bash` — Opens an interactive Bash shell inside a running container.
+- `docker exec -it CONTAINER_ID /bin/sh` — Opens an interactive `sh` shell if Bash is unavailable.
+- `-i` keeps input open, while `-t` allocates a terminal.
