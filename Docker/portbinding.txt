@@ -1,0 +1,3 @@
+binding the port of the host to the containers
+docker run -p8080:3306 IMAGE_NAME
+host machine port mapping to container port  --> this process is called port bindin g
